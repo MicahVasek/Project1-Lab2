@@ -12,9 +12,9 @@ def calculate(student_num: int, score: List[int]) -> None:
     best = max(scores)
     j = 0
 
-    with open('grades.csv', 'w', newline='') as csvfile:
-        csv_writer = csv.writer(csvfile)
-        csv_writer.writerow(['Student', 'Score', 'Grade'])
+        with open('grades.csv', 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Student', 'Score', 'Grade'])
         for i in scores:
             j += 1
             if i >= (best - 10):
@@ -27,4 +27,4 @@ def calculate(student_num: int, score: List[int]) -> None:
                 grade = 'D'
             else:
                 grade = 'F'
-            csv_writer.writerow([f'Student {j}', i, grade])
+            writer.writerow([f'Student {j}', i, grade])
