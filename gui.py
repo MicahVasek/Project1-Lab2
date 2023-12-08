@@ -23,7 +23,7 @@ class Gui:
 
         self.frame_2 = Frame(self.window)
         self.radio_answer = IntVar()
-        self.radio_answer.set(0)
+        self.radio_answer.set(1)
         self.radiobutton_2 = Radiobutton(self.frame_2, text='two', variable=self.radio_answer, value=2)
         self.radiobutton_3 = Radiobutton(self.frame_2, text='three', variable=self.radio_answer, value=3)
         self.radiobutton_4 = Radiobutton(self.frame_2, text='four', variable=self.radio_answer, value=4)
